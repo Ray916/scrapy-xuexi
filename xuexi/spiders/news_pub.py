@@ -64,21 +64,23 @@ class NewsPubSpider(scrapy.Spider):
 
         item = XuexiItem()
         item['item_id'] = meta['itemId']
-        item['item_type'] = meta['type']
-        item['channels'] = meta['channelNames']
+        #item['item_type'] = meta['type']
+        #item['channels'] = meta['channelNames']
 
-        item['images'] = data['image']
-        item['title'] = data['title']
-        item['audios'] = data['audios']
+        #item['images'] = data['image']
+        #item['title'] = data['title']
+
+        #item['audios'] = data['audios']
+
         item['source'] = data['show_source']
-        item['videos'] = data['videos']
-        item['voices'] = data['voices']
-        item['content'] = data['content']
-        item['categories'] = data['category']
-        item['tags'] = data['show_tag']
+        #item['videos'] = data['videos']
+        #item['voices'] = data['voices']
+        #item['content'] = data['content']
+        #item['categories'] = data['category']
+        #item['tags'] = data['show_tag']
         item['pub_time'] = data['publish_time']
-        item['normalized_title'] = data['normalized_title']
-        item['normalized_content'] = data['normalized_content']
+        item['title'] = data['normalized_title']
+        item['content'] = data['normalized_content']
 
         yield item
         
