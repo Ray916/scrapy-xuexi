@@ -57,7 +57,7 @@ class NewsPubSpider(scrapy.Spider):
 
         #file_path = '/home/xzw/scrapy/xuexi/'
         file_path = ''
-        with open(file_path + meta['itemId'] + '.json', 'w') as f:
+        with open(file_path + meta['itemId'] + '.json', 'a') as f:
             f.write(result)
 
         data = json.loads(result)
